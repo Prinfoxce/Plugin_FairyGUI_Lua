@@ -42,6 +42,10 @@ public final class GenerateLuaCodePlugin implements IPublishHandler {
         publishData = data;
         stepCallback = callback;
         prefix = _editor.project.customProperties["lua_class_prefix"];
+        if (prefix == null)
+        {
+            prefix = "";
+        }
 
         clearLogFile();
 
